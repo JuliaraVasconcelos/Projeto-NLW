@@ -10,6 +10,7 @@
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-color: #481c95;
+    background-attachment: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,6 +52,24 @@
    flex-wrap: nowrap;
    font-size: 14px;
    padding: 5px;
+ }
+header section {
+    min-width: 50%;
+    max-width: 600px;
+ }
+ header section div p {
+    /* adicionado um word-wrap aos paragrafos para ter quebra de linha quando o tamanho da caixa diminuir*/
+    word-wrap: break-word;
+ }
+header section {
+   min-width: 50%;
+   max-width: 600px;
+}
+ .header {
+    transition: transform 0.3s;
+    animation: fromTop 0.6s 0.3s backwards;
+    /* adicionado um margin-right ao .header para os elementos dentro do header ficarem mais bonitos visualmente*/
+    margin-right: 20px;
  }
 div img{
    transition: transform .3s;
@@ -139,5 +158,10 @@ div img:hover{
      100% {
         opacitiy: 1;
         transform: translateX(0);
+     }
+  }
+  @media (max-width: 350px) {
+     .header {
+        margin-right: 10px;
      }
   }
